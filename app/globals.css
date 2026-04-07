@@ -42,7 +42,6 @@ body {
 
 .site-header .inner {
   max-width: 640px;
-  margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -53,7 +52,6 @@ body {
   flex: 1;
   max-width: 640px;
   width: 100%;
-  margin: 0 auto;
   padding: 2.5rem 1.5rem;
 }
 
@@ -64,7 +62,6 @@ body {
 
 .site-footer .inner {
   max-width: 640px;
-  margin: 0 auto;
   padding: 0 1.5rem;
   color: var(--fg-dim);
   font-size: 0.85rem;
