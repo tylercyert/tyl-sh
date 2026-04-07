@@ -17,7 +17,7 @@ export default function Home() {
         <h2>work</h2>
         <div className="project">
           <h3>
-            <Link href="https://github.com/tylercyert/nitesong">nitesong</Link>
+            <Link href="https://www.nitesong.io">nitesong</Link>
           </h3>
           <p>
             Creator and sole developer of nitesong — songwriting SaaS built to
