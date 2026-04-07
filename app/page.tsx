@@ -14,16 +14,15 @@ export default function Home() {
       <hr />
 
       <section>
-        <h2>projects</h2>
+        <h2>work</h2>
         <div className="project">
           <h3>
             <Link href="https://github.com/tylercyert/nitesong">nitesong</Link>
           </h3>
           <p>
-            A songwriting suite for capturing, organizing, and collaborating on
-            songs.
+            Creator and sole developer of nitesong — songwriting SaaS built to
+            amplify the human creative experience.
           </p>
-          <span className="tech">Next.js · Supabase · Prisma</span>
         </div>
       </section>
 
