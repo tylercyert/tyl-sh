@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
-import PostCard from "@/components/PostCard";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "blog",
   description: "Blog posts by Tyler Cyert.",
 };
 
@@ -11,17 +11,22 @@ export default function BlogIndex() {
   const posts = getAllPosts();
 
   return (
-    <div className="space-y-8">
-      <h1 className="text-3xl font-bold tracking-tight">Blog</h1>
+    <>
+      <h1>blog</h1>
       {posts.length === 0 ? (
-        <p className="text-zinc-500 dark:text-zinc-400">No posts yet.</p>
+        <p style={{ color: "var(--fg-dim)" }}>No posts yet.</p>
       ) : (
-        <div className="space-y-8">
+        <ul className="post-list" style={{ marginTop: "1rem" }}>
           {posts.map((post) => (
-            <PostCard key={post.slug} post={post} />
+            <li key={post.slug} className="post-item">
+              <span className="post-date">
+                {new Date(post.date).toISOString().slice(0, 10)}
+              </span>
+              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
-    </div>
+    </>
   );
 }

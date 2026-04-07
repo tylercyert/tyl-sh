@@ -1,41 +1,52 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
-import PostCard from "@/components/PostCard";
 
 export default function Home() {
   const recentPosts = getAllPosts().slice(0, 5);
 
   return (
-    <div className="space-y-12">
-      <section className="space-y-4">
-        <h1 className="text-3xl font-bold tracking-tight">Tyler Cyert</h1>
-        <p className="text-lg text-zinc-600 dark:text-zinc-400">
-          Projects, thoughts, and writing.
-        </p>
-        <Link
-          href="/about"
-          className="inline-block text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
-        >
-          More about me &rarr;
-        </Link>
+    <>
+      <section>
+        <h1>&gt;tyl.sh</h1>
+        <p>Projects, thoughts, and writing by Tyler Cyert.</p>
       </section>
 
+      <hr />
+
+      <section>
+        <h2>projects</h2>
+        <div className="project">
+          <h3>
+            <Link href="https://github.com/tylercyert/nitesong">nitesong</Link>
+          </h3>
+          <p>
+            A songwriting suite for capturing, organizing, and collaborating on
+            songs.
+          </p>
+          <span className="tech">Next.js · Supabase · Prisma</span>
+        </div>
+      </section>
+
+      <hr />
+
       {recentPosts.length > 0 && (
-        <section className="space-y-6">
-          <h2 className="text-xl font-semibold tracking-tight">Recent Posts</h2>
-          <div className="space-y-8">
+        <section>
+          <h2>recent posts</h2>
+          <ul className="post-list">
             {recentPosts.map((post) => (
-              <PostCard key={post.slug} post={post} />
+              <li key={post.slug} className="post-item">
+                <span className="post-date">
+                  {new Date(post.date).toISOString().slice(0, 10)}
+                </span>
+                <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+              </li>
             ))}
-          </div>
-          <Link
-            href="/blog"
-            className="inline-block text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
-          >
-            All posts &rarr;
-          </Link>
+          </ul>
+          <p style={{ marginTop: "1rem" }}>
+            <Link href="/blog">all posts &rarr;</Link>
+          </p>
         </section>
       )}
-    </div>
+    </>
   );
 }
