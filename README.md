@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# tyl.sh
 
-## Getting Started
+Personal site and blog for Tyler Cyert. Built with Next.js and MDX, styled as a minimal terminal/BBS dark theme.
 
-First, run the development server:
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Blog posts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Posts live in `content/posts/` as `.mdx` files. Each file needs frontmatter at the top:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```mdx
+---
+title: "Post Title"
+date: "2026-04-05"
+description: "A short summary shown in post listings."
+tags: ["tag1", "tag2"]
+---
 
-## Learn More
+Post content goes here. Standard Markdown works — headings, lists, code blocks, images, links, etc.
+```
 
-To learn more about Next.js, take a look at the following resources:
+To add a new post, create a file like `content/posts/my-new-post.mdx`. The filename becomes the URL slug (`/blog/my-new-post`). Posts are sorted by date, newest first.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Interactive elements in posts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Since posts are MDX, you can import and use React components inline. Register them in `components/MDXComponents.tsx` to make them available in all posts.
 
-## Deploy on Vercel
+## Site pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Page | File | Notes |
+|------|------|-------|
+| Home | `app/page.tsx` | Intro, projects list, recent posts |
+| About | `app/about/page.tsx` | Bio / about me |
+| Blog index | `app/blog/page.tsx` | All posts listed by date |
+| Blog post | `app/blog/[slug]/page.tsx` | Renders MDX from `content/posts/` |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Projects
+
+Projects are listed on the homepage in `app/page.tsx`. To add or edit a project, update the `projects` section in that file.
+
+## Styling
+
+All styles are in `app/globals.css` — plain CSS, no framework. Blog post content is styled via the `.prose` class.
+
+## Deployment
+
+Pushes to `main` deploy automatically via Vercel.
