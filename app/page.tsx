@@ -20,7 +20,7 @@ export default function Home() {
             <Link href="https://github.com/tylercyert/nitesong">nitesong</Link>
           </h3>
           <p>
-            Creator and developer of nitesong — songwriting SaaS built to
+            Creator and sole developer of nitesong — songwriting SaaS built to
             amplify human creative experience and collaboration.
           </p>
         </div>
