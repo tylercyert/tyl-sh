@@ -21,7 +21,7 @@ export default function Home() {
           </h3>
           <p>
             Creator and sole developer of nitesong — songwriting SaaS built to
-            amplify human creative experience and collaboration.
+            amplify the human creative experience.
           </p>
         </div>
       </section>
