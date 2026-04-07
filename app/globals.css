@@ -43,9 +43,6 @@ body {
 .site-header .inner {
   max-width: 640px;
   padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .site-main {
@@ -73,16 +70,14 @@ body {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
-  text-shadow:
-    0 0 7px rgba(249, 115, 22, 0.6),
-    0 0 20px rgba(249, 115, 22, 0.4);
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 /* === Nav === */
-nav ul {
+nav {
   display: flex;
   gap: 1.5rem;
-  list-style: none;
 }
 
 nav a {

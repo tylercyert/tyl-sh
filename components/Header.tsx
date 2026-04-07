@@ -19,23 +19,20 @@ export default function Header() {
           {">"}tyl.sh_
         </Link>
         <nav>
-          <ul>
-            {links.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={
-                    pathname === href ||
-                    (href !== "/" && pathname.startsWith(href))
-                      ? "active"
-                      : undefined
-                  }
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={
+                pathname === href ||
+                (href !== "/" && pathname.startsWith(href))
+                  ? "active"
+                  : undefined
+              }
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
