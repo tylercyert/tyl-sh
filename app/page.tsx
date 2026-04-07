@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <section>
-        <h1>Hello!</h1>
+        <h1>hello world!</h1>
         <p>My name is Tyler Cyert. By day, I am a Systems Engineer at SoundPro.com. By night, I am a developer, writer, and musician.</p>
       </section>
 
