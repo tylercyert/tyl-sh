@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <section>
-        <h1>&gt;tyl.sh</h1>
-        <p>Projects, thoughts, and writing by Tyler Cyert.</p>
+        <h1>Hello!</h1>
+        <p>My name is Tyler Cyert. By day, I am a Systems Engineer at SoundPro.com. By night, I am a developer, writer, and musician.</p>
       </section>
 
       <hr />
