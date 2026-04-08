@@ -9,37 +9,39 @@ tags: ["ai", "software", "series:high-impact-low-understanding"]
 
 ## The prompt-to-production pipeline
 
-Here's the workflow: you type a sentence. Maybe two. AI generates hundreds, sometimes thousands, of lines of code. You skim the output, or you don't, and hit deploy. A one-line prompt just became a production system.
+Here's the workflow: you type a sentence. Maybe two. AI generates an entire application, a workflow, a report, an automation that touches real business data. You skim the output, or you don't, and put it to work. A one-line prompt just became something your team depends on.
 
-The ratio is the problem. A sentence of effort in, a codebase of consequences out. Somewhere in that gap lives every bug and every architectural decision you didn't make but are now responsible for.
+The ratio is the problem. A sentence of effort in, a system of consequences out. Somewhere in that gap lives every bug and every design decision you didn't make but are now responsible for. This isn't just a developer problem. In most traditional orgs, the person typing that prompt isn't a developer at all. They're a department head, a project manager, a business analyst who saw a demo and thought "I could build that."
 
-I wrote about [the personal side of this](/blog/how-i-use-ai-to-scale-my-skills) a couple weeks ago. The instant gratification of completing a time-consuming task quickly can quietly chip away at independent thought. But that was about my own discipline. This is about what happens at scale, when entire teams and organizations operate in that gap.
+I wrote about [the personal side of this](/blog/how-i-use-ai-to-scale-my-skills) a couple weeks ago. The instant gratification of completing a time-consuming task quickly can quietly chip away at independent thought. But that was about my own discipline. This is about what happens at scale, when entire organizations operate in that gap, and nobody has written a policy for it yet.
 
 ## You think you're faster. You're not.
 
-In mid-2025, [METR ran a controlled experiment](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) that should make anyone pause. Sixteen experienced open-source developers, people with an average of five years on their respective projects, completed 246 tasks. Half the time they could use AI tools (Cursor Pro, Claude, the works). Half the time they couldn't.
+In mid-2025, [METR ran a controlled experiment](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) that should make anyone pause. Sixteen experienced software developers, people with an average of five years on their respective projects, completed 246 tasks. Half the time they could use AI tools. Half the time they couldn't.
 
 AI tools made them 19% slower.
 
-But here's what got me. Even after experiencing that slowdown firsthand, the developers still believed AI had made them 20% faster. Not a small miscalibration. A complete inversion. They felt faster while measurably losing time to reviewing, refactoring, and debugging AI output.
+But here's what got me. Even after experiencing that slowdown firsthand, the developers still believed AI had made them 20% faster. Not a small miscalibration. A complete inversion. They felt faster while measurably losing time to reviewing, debugging, and fixing AI output.
 
-Now put that confidence gap in someone who *doesn't* have five years of context on the codebase.
+These were experts. People who do this for a living. Now imagine that same confidence gap in a stakeholder who has never written code, has no framework for evaluating what AI produced, and has enough organizational authority that nobody is going to second-guess them.
 
 ## Confidence scales inversely with competence
 
-Stanford researchers found that [developers using AI code assistants](https://techcrunch.com/2022/12/28/code-generating-ai-can-introduce-security-vulnerabilities-study-finds/) wrote less secure code while reporting *higher* confidence that their code was secure. Read that again. The tool made the output worse and made them more sure of it.
+Stanford researchers found that [developers using AI code assistants](https://techcrunch.com/2022/12/28/code-generating-ai-can-introduce-security-vulnerabilities-study-finds/) wrote less secure code while reporting *higher* confidence that their code was secure. Read that again. The tool made the output worse and made them more sure of it. And these are people trained to evaluate code.
 
-This lines up with what's happening in the wild. [Junior developers report the highest confidence shipping AI code without review](https://www.infoq.com/news/2025/11/ai-code-technical-debt/), with 60.2% comfortable pushing it straight to production. Senior developers? Only 25.8%. The people with the least context to evaluate AI output are the most willing to trust it.
+The pattern holds across experience levels. [Junior developers report the highest confidence shipping AI code without review](https://www.infoq.com/news/2025/11/ai-code-technical-debt/), with 60.2% comfortable pushing it straight to production. Senior developers? Only 25.8%. The less you know, the more you trust.
 
-There's a name for this: [automation complacency](https://link.springer.com/article/10.1007/s00146-025-02422-7). People stop checking automated systems because the systems are *usually* right. When users aren't familiar with a task, [they lean on AI and trust its outputs more than they should](https://www.sciencedirect.com/science/article/pii/S2949882124000598) because they don't know enough to question it. When users *are* familiar, they get complacent in the other direction, assuming AI handles routine decisions fine and skipping the review.
+Now extend that outside engineering entirely. A VP building an automated reporting pipeline, a sales lead spinning up a customer-facing chatbot, an operations manager wiring together a data workflow. These people aren't even in the conversation about code review. They don't know it's a conversation that should be happening.
 
-Either way, nobody's reading the output.
+There's a name for this: [automation complacency](https://link.springer.com/article/10.1007/s00146-025-02422-7). People stop checking automated systems because the systems are *usually* right. When users aren't familiar with a task, [they lean on AI and trust its outputs more than they should](https://www.sciencedirect.com/science/article/pii/S2949882124000598) because they don't know enough to question it. In a traditional business environment with no AI policy and no technical oversight, that complacency goes completely unchecked.
+
+Nobody's reading the output. And in most orgs, nobody's even asking if someone should be.
 
 ## AI slop's defining formula
 
 There's a term for the broader pattern: AI slop. It started as a way to describe the flood of low-quality AI-generated content online, but the mechanics apply to code too. AI slop has [three defining properties](https://en.wikipedia.org/wiki/AI_slop): superficial competence, asymmetric effort, and mass producibility.
 
-Superficial competence: it looks right. The syntax is clean, the function names are reasonable, it probably compiles. Asymmetric effort: the person who generated it spent seconds, but the person who has to evaluate it needs hours. Mass producibility: one person can generate more in a day than a team could review in a week.
+Superficial competence: it looks right. The app loads, the report generates, the workflow runs. Asymmetric effort: the person who generated it spent seconds, but the person who'd need to evaluate it properly would need hours. Mass producibility: one person can generate more in a day than a team could review in a week.
 
 That asymmetry drives everything. When the cost of producing something approaches zero but the cost of evaluating it stays high, the default behavior is to skip the evaluation. Gartner is already predicting [atrophy of critical-thinking skills](https://cxm.world/todays-pick/2026-predictions-the-year-ai-turns-nasty-and-makes-us-lazy/) from GenAI use through 2026. We're not just failing to check the output. We're losing the muscle for it.
 
@@ -47,7 +49,9 @@ That asymmetry drives everything. When the cost of producing something approache
 
 Small input. Massive output. Zero comprehension.
 
-The person generating the code doesn't have the expertise to evaluate it. The person who *could* evaluate it doesn't have the time, because the volume of AI-generated code has already [overwhelmed existing review processes](https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026). So you end up with a growing stack of systems that work well enough to ship but that nobody actually understands.
+The person generating the solution doesn't have the expertise to evaluate it. The people who *could* evaluate it either don't know it exists (because it's a shadow project) or don't have the time, because the volume of AI-generated work has already [overwhelmed existing review processes](https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026). So you end up with a growing stack of business-critical systems that work well enough to depend on but that nobody actually understands.
+
+The scariest version of this isn't in a tech company. It's in a mid-size insurance firm, or a hospital system, or a manufacturing company where the person building the tool is also the person who decides whether it's ready. No code review. No security audit. No policy that says they need one. Just a senior stakeholder who typed a prompt, got a result, and rolled it out to the team.
 
 This isn't about AI being bad at writing code. Sometimes it's great. It's about the feedback loop. The easier it is to produce output, the less we look at it. The less we look at it, the more we trust it. That cycle doesn't correct itself.
 
