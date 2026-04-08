@@ -13,15 +13,15 @@ For most of computing history, the worst thing a non-technical person could do w
 
 The blast radius of a bad decision was proportional to the skill required to make it. If you didn't know what you were doing, your tools kept the damage small. A kitchen knife can cut you, but it's not taking out a city block.
 
-AI changed the proportions. That same person can now deploy infrastructure, modify production databases, ship customer-facing applications. The capability scaled. The judgment didn't.
+AI changed the proportions. That same person, the ops manager, the VP of marketing, the project lead who's never opened a terminal, can now spin up customer-facing applications, automate workflows that touch sensitive data, and build internal tools that the rest of the department starts depending on. The capability scaled. The judgment didn't.
 
 We handed everyone an ICBM and a "launch" button that accepts plain English.
 
 ## Citizen developers and shadow apps
 
-The numbers are hard to ignore. By 2026, business-user "developers" [outnumber professional developers 4:1](https://betanews.com/2025/12/17/citizen-developers-dominate-the-rise-of-ai-code-as-the-new-latin-development-predictions-for-2026/). Three-quarters of all apps are being built with low-code tools, many by people outside of IT.
+The numbers are hard to ignore. By 2026, business-user "developers" [outnumber professional developers 4:1](https://betanews.com/2025/12/17/citizen-developers-dominate-the-rise-of-ai-code-as-the-new-latin-development-predictions-for-2026/). Three-quarters of all apps are being built with low-code tools, many by people who have never worked in IT.
 
-This isn't hypothetical. The average enterprise is running somewhere between [4,500 and 6,000 AI-generated apps, workflows, and automations](https://zenity.io/use-cases/business-needs/citizen-development) in 2026. Two-thirds of those are invisible to security and IT teams. Shadow IT used to mean someone installing Dropbox on their work laptop. Now it means thousands of AI-generated microservices that nobody in the building knows exist.
+This isn't hypothetical. The average enterprise is running somewhere between [4,500 and 6,000 AI-generated apps, workflows, and automations](https://zenity.io/use-cases/business-needs/citizen-development) in 2026. Two-thirds of those are invisible to security and IT teams. And most of these orgs don't have an AI usage policy, or they have one that nobody reads, and the people building these shadow projects are senior enough that nobody's checking their work. Shadow IT used to mean someone installing Dropbox on their work laptop. Now it means a director built an entire customer intake system over a weekend and half the department is already using it.
 
 ## When the ICBM goes off
 
@@ -35,14 +35,14 @@ They're not alone. A [vibe-coded app exposed 1.5 million API keys and 35,000 use
 
 Andrej Karpathy coined "vibe coding" in [a February 2025 post](https://x.com/karpathy/status/1886192184808149383?lang=en), describing a style of programming where you "fully give in to the vibes, embrace exponentials, and forget that the code even exists." Collins named it Word of the Year for 2025. That should tell you something about how fast this spread.
 
-I'm not here to dunk on vibe coding. I use these tools every day, and they're impressive. But there's a real difference between an experienced developer leaning on AI to speed up familiar work and a stakeholder with no engineering background deploying a production system they can't debug when it breaks.
+I'm not here to dunk on vibe coding. I use these tools every day, and they're impressive. But there's a real difference between a technical person leaning on AI to speed up familiar work and a business stakeholder with no engineering background deploying something their whole team starts relying on. Especially when that stakeholder has the organizational authority to greenlight their own project and nobody between them and production is asking hard questions.
 
-People who could never build software before can now. Some of those apps solve real problems. The failure mode isn't "the app doesn't work," though. It's "the app works well enough to reach production, where it does real damage."
+People who could never build software before can now. Some of those apps solve real problems. The failure mode isn't "the app doesn't work," though. It's "the app works well enough that the department adopts it, and then it breaks in a way nobody in the building can fix."
 
 ## Guardrails, not gatekeeping
 
-I don't think the answer is restricting who gets to build things. That ship sailed, and honestly, it should have. But the tools alone aren't enough. The gap between "I can build this" and "I understand what I built" is where the damage lives.
+I don't think the answer is restricting who gets to build things. That ship sailed, and honestly, it should have. But the tools alone aren't enough. The gap between "I can build this" and "I understand what I built" is where the damage lives. And in most traditional orgs, nobody is even aware that gap exists, because the people with the authority to build are also the people with the authority to skip review.
 
-Amazon figured this out the hard way. Someone who understands the blast radius needs to be in the loop. Not to block progress, but to catch the stuff that plain English can't express: the failure modes, the edge cases, the "what happens when this runs at scale" questions that no prompt is asking.
+Amazon figured this out the hard way. Someone who understands the blast radius needs to be in the loop. Not to block progress, but to catch the stuff that natural language can't express: the failure modes, the edge cases, the "what happens when this handles real customer data" questions that no prompt is asking.
 
-The toys got bigger. The hands didn't. That's not a reason to take the toys away. It's a reason to teach people what they're holding.
+The toys got bigger. The hands didn't. That's not a reason to take the toys away. It's a reason to teach people what they're holding, and to build policies before the next director ships something to production from their living room.
