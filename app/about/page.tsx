@@ -20,7 +20,7 @@ export default function AboutPage() {
         human nature rather than exploits it. Technology can do great things
         when focused correctly, and real damage when it isn&apos;t. I&apos;ve
         got a few products in my pipeline, and I hope you&apos;ll notice the
-        pattern: leaning into humanity, not away from it.
+        pattern: they&apos;re built for people, not around them.
       </p>
     </div>
   );

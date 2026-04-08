@@ -27,8 +27,8 @@ export default function Home() {
             <Link href="https://www.nitesong.io">nitesong</Link>
           </h3>
           <p>
-            Creator and sole developer of nitesong — songwriting SaaS built to
-            amplify the human creative experience.
+            Creator and sole developer of nitesong — songwriting SaaS built for
+            writers who want to stay in the creative flow.
           </p>
         </div>
       </section>
