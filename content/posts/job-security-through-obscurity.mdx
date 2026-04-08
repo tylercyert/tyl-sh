@@ -5,60 +5,60 @@ description: "When nobody wrote the code, nobody understands it. And that create
 tags: ["ai", "software", "series:high-impact-low-understanding"]
 ---
 
-> This is Part 4 of the [High Impact, Low Understanding](/blog) series — a look at what happens when AI gives everyone a bigger weapon but not better aim.
+> Part 4 of the [High Impact, Low Understanding](/blog) series.
 
-## The Classic Anti-Pattern
+## The classic anti-pattern
 
 "Security through obscurity" is one of the first things you learn not to do in software. Don't hide the algorithm. Don't rely on nobody looking. Don't assume complexity is the same as safety. It fails every time, because eventually someone does look, and the thing you hid behind complexity was never actually secure.
 
-I think we're building a career version of the same anti-pattern. Call it job security through obscurity. When nobody wrote the code, nobody understands it. And when nobody understands it, whoever can *appear* to understand it becomes indispensable — not because they're skilled, but because the alternative is even worse.
+I think we're building a career version of the same anti-pattern. Call it job security through obscurity. When nobody wrote the code, nobody understands it. And when nobody understands it, whoever can *appear* to understand it becomes indispensable. Not because they're skilled, but because the alternative is worse.
 
-## The Maintainability Crisis
+## The maintainability crisis
 
-The numbers on AI-generated technical debt are getting hard to hand-wave away.
+The numbers on AI-generated technical debt are getting hard to wave away.
 
-Ox Security's 2025 report described AI-generated code as ["highly functional but systematically lacking in architectural judgment."](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) It works. It also doesn't *fit* — not with the existing codebase, not with the project's conventions, not with any coherent long-term design.
+Ox Security's 2025 report described AI-generated code as ["highly functional but systematically lacking in architectural judgment."](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) It works. It also doesn't *fit*. Not with the existing codebase, not with the project's conventions, not with any coherent long-term design.
 
-The downstream cost is real. [Unmanaged AI-generated code drives maintenance costs to 4x traditional levels by year two.](https://www.buildmvpfast.com/blog/ai-generated-code-technical-debt-management-2026) Total unresolved technical debt from AI code grew from a few hundred issues in early 2025 to over 110,000 by February 2026. And the growth isn't slowing down — it's compounding.
+The cost shows up fast. [Unmanaged AI-generated code drives maintenance costs to 4x traditional levels by year two.](https://www.buildmvpfast.com/blog/ai-generated-code-technical-debt-management-2026) Total unresolved technical debt from AI code grew from a few hundred issues in early 2025 to over 110,000 by February 2026. That number is compounding.
 
-Developer trust reflects the reality. [Trust in AI code accuracy dropped from 40% to 29%](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) year over year. 46% of developers now actively distrust the output. The people closest to the code are getting more skeptical, not less.
+Developer trust tells the same story. [Trust in AI code accuracy dropped from 40% to 29%](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) year over year. 46% of developers now actively distrust the output. The people closest to the code are getting more skeptical, not less.
 
-## The cURL Story
+## The cURL story
 
-This one stuck with me. Daniel Stenberg, the maintainer of cURL — a tool that basically every computer on the internet touches — [shut down the project's bug bounty program](https://www.theregister.com/2026/01/21/curl_ends_bug_bounty/) at the end of January 2026.
+This one stuck with me. Daniel Stenberg, the maintainer of cURL (a tool that basically every computer on the internet touches) [shut down the project's bug bounty program](https://www.theregister.com/2026/01/21/curl_ends_bug_bounty/) at the end of January 2026.
 
-The reason wasn't lack of funding or interest. It was AI slop. By mid-2025, roughly 20% of bug bounty submissions were AI-generated reports that "sound technical but contain nothing useful." Submission volume spiked to eight times the normal rate. The confirmed-vulnerability rate, which had previously exceeded 15%, dropped below 5%.
+The reason wasn't funding or interest. It was AI slop. By mid-2025, roughly 20% of bug bounty submissions were AI-generated reports that "sound technical but contain nothing useful." Submission volume spiked to eight times normal. The confirmed-vulnerability rate, which had been above 15%, dropped below 5%.
 
-Stenberg's hope was that ending the bounty would "remove the incentive for people to submit crap." Think about that for a second. One of the most critical open-source projects in the world had to shut down its security reporting pipeline because AI made it too easy to generate plausible-looking garbage at scale.
+Stenberg's hope was that ending the bounty would "remove the incentive for people to submit crap." Think about that. One of the most critical open-source projects in the world had to shut down its security reporting pipeline because AI made it too easy to generate plausible-looking garbage at scale.
 
-That's the asymmetry again. Trivial effort to produce. Enormous effort to evaluate.
+Trivial effort to produce. Enormous effort to evaluate.
 
-## The Junior Developer Freeze
+## The junior developer freeze
 
 Here's where it gets uncomfortable. Companies are freezing junior developer hiring because "AI can do that work." On the surface, the math checks out. Why hire someone to write boilerplate when AI handles it for pennies?
 
-But a junior developer isn't just a ticket closer. They're a future architect in training. They're the person who, in five years, will have the context and judgment to review AI output and catch what it gets wrong. Every junior you don't hire is a senior you won't have.
+But a junior developer isn't just a ticket closer. They're a future architect in training. In five years, they're the person with enough context and judgment to review AI output and catch what it gets wrong. Every junior you don't hire is a senior you won't have.
 
-The data supports this concern from both directions. [Junior developers report the lowest quality improvements from AI tools](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) — just 51.9% — but the highest confidence shipping AI code without review at 60.2%. They're the ones most likely to push unreviewed AI code to production and the least equipped to catch what's wrong with it.
+The data backs this up from both directions. [Junior developers report the lowest quality improvements from AI tools](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) (just 51.9%) but the highest confidence shipping AI code without review (60.2%). They're the ones most likely to push unreviewed AI code to production and the least equipped to catch what's wrong with it.
 
-Meanwhile, seniors — the people who actually can evaluate the output — see higher quality gains but are far less confident shipping unreviewed code. They know what to look for, so they know when to worry. But there are only so many of them, and the volume of AI-generated code is [overwhelming existing review capacity](https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026).
+Seniors, the people who actually can evaluate the output, see higher quality gains but are far less confident shipping unreviewed code. They know what to look for, so they know when to worry. But there are only so many of them, and the volume of AI-generated code is [overwhelming existing review capacity](https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026).
 
-## The Irony
+## The irony
 
 AI was supposed to make developers replaceable. Commoditize the coding. Let the machines handle the implementation so humans could focus on the vision.
 
-What's actually happening is stranger. AI is creating a new kind of irreplaceability — the person who can interpret and wrangle the AI's output, even imperfectly. Not because they're great engineers, but because nobody else in the room has any idea what the generated system does.
+What's actually happening is stranger. AI is creating a new kind of irreplaceability: the person who can interpret and wrangle the AI's output, even imperfectly. Not because they're great engineers, but because nobody else in the room has any idea what the generated system does.
 
-That's job security through obscurity. And like its security counterpart, it's fragile. It works until someone looks closely. It works until the system breaks and nobody can debug it. It works until a better AI tool comes along that doesn't need a human interpreter at all.
+That's job security through obscurity. Like its security counterpart, it's fragile. It works until someone looks closely. It works until the system breaks and nobody can debug it. It works until a better AI tool comes along that doesn't need a human interpreter at all.
 
-Building your career on other people not understanding what you shipped is a losing strategy — whether that opacity comes from AI-generated complexity or from deliberately over-engineering things nobody asked for. The cure is the same either way: understand what you deploy. If you can't explain it, you don't own it. And if nobody owns it, everybody pays for it.
+Building your career on other people not understanding what you shipped is a losing strategy, whether that opacity comes from AI-generated complexity or from deliberately over-engineering things nobody asked for. The cure is the same either way: understand what you deploy. If you can't explain it, you don't own it.
 
-## Where This Leaves Us
+## Where this leaves us
 
-This isn't a new problem wearing a new hat. Software has always had tension between speed and quality, between shipping and understanding, between "it works" and "it's right." What AI did was widen the gap between those two things faster than the industry could adapt.
+This isn't a new problem wearing a new hat. Software has always had tension between speed and quality, between shipping and understanding, between "it works" and "it's right." AI just widened that gap faster than the industry could adapt.
 
-The tools are going to keep getting better. Karpathy already moved past "vibe coding" to ["agentic engineering."](https://thenewstack.io/vibe-coding-is-passe/) Governance frameworks are emerging. Amazon figured out the hard way that you need senior review on AI-assisted deploys. The industry will catch up. It usually does.
+The tools are going to keep getting better. Karpathy already moved past "vibe coding" to ["agentic engineering."](https://thenewstack.io/vibe-coding-is-passe/) Governance frameworks are forming. Amazon figured out the hard way that you need senior review on AI-assisted deploys. The industry will catch up. It usually does.
 
-But in the meantime, the responsibility falls on the people in the room. If you're the one generating the code, read what it wrote. If you're the one reviewing it, don't rubber-stamp it because the volume is high. If you're the one deciding headcount, think twice before cutting the juniors who'll become tomorrow's safeguard.
+But in the meantime, the responsibility falls on whoever is in the room. If you're generating the code, read what it wrote. If you're reviewing it, don't rubber-stamp it because the volume is high. If you're deciding headcount, think twice before cutting the juniors who become tomorrow's safeguard.
 
-Obscurity isn't security. Not for systems. Not for careers. Not for any of us.
+Obscurity isn't security. Not for systems and not for careers.
