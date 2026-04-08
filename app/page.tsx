@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <section>
-        <pre style={{ color: "var(--accent)", fontSize: "0.45rem", lineHeight: 1.2, marginBottom: "1rem" }}>{` :::::::::::  :::   :::  :::              ::::::::   :::    :::
+        <pre style={{ color: "var(--accent)", fontSize: "0.45rem", lineHeight: 1.2, marginBottom: "1rem" }}>{`  :::::::::::  :::   :::  :::              ::::::::   :::    :::
      :+:      :+:   :+:  :+:             :+:    :+:  :+:    :+:
     +:+       +:+ +:+   +:+             +:+         +:+    +:+
    +#+        +#++:    +#+             +#++:++#++  +#++:++#++
