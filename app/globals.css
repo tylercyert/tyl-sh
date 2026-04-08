@@ -176,6 +176,11 @@ hr {
 }
 
 /* === Prose (blog content) === */
+.prose h1:first-child {
+  font-size: 1.4rem;
+  margin: 0 0 0.75rem;
+}
+
 .prose h1 {
   font-size: 1.4rem;
   margin: 2rem 0 0.75rem;
