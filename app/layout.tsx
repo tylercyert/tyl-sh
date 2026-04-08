@@ -25,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geistMono.variable}>
+      <head>
+        <link rel="alternate" type="application/rss+xml" title="tyl.sh" href="/feed.xml" />
+      </head>
       <body>
         <Header />
         <main className="site-main">{children}</main>
