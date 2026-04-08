@@ -5,50 +5,50 @@ description: "AI's feedback loop exploits our shrinking attention spans. We type
 tags: ["ai", "software", "series:high-impact-low-understanding"]
 ---
 
-> This is Part 2 of the [High Impact, Low Understanding](/blog) series — a look at what happens when AI gives everyone a bigger weapon but not better aim.
+> Part 2 of the [High Impact, Low Understanding](/blog) series.
 
-## The Prompt-to-Production Pipeline
+## The prompt-to-production pipeline
 
-Here's the workflow: you type a sentence. Maybe two. AI generates hundreds, sometimes thousands, of lines of code. You skim the output — or don't — and hit deploy. A one-line prompt just became a production system.
+Here's the workflow: you type a sentence. Maybe two. AI generates hundreds, sometimes thousands, of lines of code. You skim the output, or you don't, and hit deploy. A one-line prompt just became a production system.
 
-The ratio is the problem. A sentence of effort in, a codebase of consequences out. Somewhere in that gap lives every bug, every vulnerability, every architectural decision you didn't make but are now responsible for.
+The ratio is the problem. A sentence of effort in, a codebase of consequences out. Somewhere in that gap lives every bug and every architectural decision you didn't make but are now responsible for.
 
 I wrote about [the personal side of this](/blog/how-i-use-ai-to-scale-my-skills) a couple weeks ago. The instant gratification of completing a time-consuming task quickly can quietly chip away at independent thought. But that was about my own discipline. This is about what happens at scale, when entire teams and organizations operate in that gap.
 
-## You Think You're Faster. You're Not.
+## You think you're faster. You're not.
 
-In mid-2025, [METR ran a controlled experiment](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) that should make anyone pause. Sixteen experienced open-source developers — people with an average of five years on their respective projects — completed 246 tasks. Half the time they could use AI tools (Cursor Pro, Claude, the works). Half the time they couldn't.
+In mid-2025, [METR ran a controlled experiment](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) that should make anyone pause. Sixteen experienced open-source developers, people with an average of five years on their respective projects, completed 246 tasks. Half the time they could use AI tools (Cursor Pro, Claude, the works). Half the time they couldn't.
 
-The result: AI tools made them **19% slower**.
+AI tools made them 19% slower.
 
-But here's the part that keeps me up at night. Even after experiencing that slowdown firsthand, the developers still believed AI had made them **20% faster**. The perception gap isn't a small miscalibration. It's a complete inversion. They felt faster while measurably losing time to reviewing, refactoring, and debugging AI output.
+But here's what got me. Even after experiencing that slowdown firsthand, the developers still believed AI had made them 20% faster. Not a small miscalibration. A complete inversion. They felt faster while measurably losing time to reviewing, refactoring, and debugging AI output.
 
-Now imagine that confidence gap in someone who *doesn't* have five years of context on the codebase.
+Now put that confidence gap in someone who *doesn't* have five years of context on the codebase.
 
-## Confidence Scales Inversely with Competence
+## Confidence scales inversely with competence
 
-Stanford researchers found that [developers using AI code assistants](https://techcrunch.com/2022/12/28/code-generating-ai-can-introduce-security-vulnerabilities-study-finds/) wrote measurably less secure code while reporting higher confidence that their code was secure. Read that again. The tool made the output worse *and* made them more confident about it.
+Stanford researchers found that [developers using AI code assistants](https://techcrunch.com/2022/12/28/code-generating-ai-can-introduce-security-vulnerabilities-study-finds/) wrote less secure code while reporting *higher* confidence that their code was secure. Read that again. The tool made the output worse and made them more sure of it.
 
-This tracks with what we're seeing in the real world. [Junior developers report the highest confidence shipping AI code without review](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) — 60.2% are comfortable pushing it straight to production. Senior developers? Only 25.8%. The people with the least context to evaluate AI output are the most willing to trust it blindly.
+This lines up with what's happening in the wild. [Junior developers report the highest confidence shipping AI code without review](https://www.infoq.com/news/2025/11/ai-code-technical-debt/), with 60.2% comfortable pushing it straight to production. Senior developers? Only 25.8%. The people with the least context to evaluate AI output are the most willing to trust it.
 
-That's not a knowledge gap. That's [automation complacency](https://link.springer.com/article/10.1007/s00146-025-02422-7) — a well-documented phenomenon where people stop checking automated systems because the systems are *usually* right. The research is clear: when users aren't familiar with a task, [they lean heavily on AI and trust its outputs more than they should](https://www.sciencedirect.com/science/article/pii/S2949882124000598) because they lack the expertise to question its accuracy. And when users *are* familiar? They get complacent in the other direction — assuming AI handles routine decisions flawlessly and skipping the review entirely.
+There's a name for this: [automation complacency](https://link.springer.com/article/10.1007/s00146-025-02422-7). People stop checking automated systems because the systems are *usually* right. When users aren't familiar with a task, [they lean on AI and trust its outputs more than they should](https://www.sciencedirect.com/science/article/pii/S2949882124000598) because they don't know enough to question it. When users *are* familiar, they get complacent in the other direction, assuming AI handles routine decisions fine and skipping the review.
 
 Either way, nobody's reading the output.
 
-## AI Slop's Defining Formula
+## AI slop's defining formula
 
-There's a term for the broader pattern: AI slop. It started as a way to describe the flood of low-quality AI-generated content online, but the underlying mechanics apply just as well to code. AI slop has [three defining properties](https://en.wikipedia.org/wiki/AI_slop): **superficial competence**, **asymmetric effort**, and **mass producibility**.
+There's a term for the broader pattern: AI slop. It started as a way to describe the flood of low-quality AI-generated content online, but the mechanics apply to code too. AI slop has [three defining properties](https://en.wikipedia.org/wiki/AI_slop): superficial competence, asymmetric effort, and mass producibility.
 
-Superficial competence: it looks right. The syntax is clean, the function names are reasonable, it probably compiles. Asymmetric effort: the person who generated it spent seconds; the person who has to evaluate it needs hours. Mass producibility: one person can generate more of it in a day than a team could review in a week.
+Superficial competence: it looks right. The syntax is clean, the function names are reasonable, it probably compiles. Asymmetric effort: the person who generated it spent seconds, but the person who has to evaluate it needs hours. Mass producibility: one person can generate more in a day than a team could review in a week.
 
-That asymmetry is the engine of the whole problem. When the cost of producing something approaches zero but the cost of evaluating it remains high, the default behavior becomes: skip the evaluation. And Gartner is already predicting [atrophy of critical-thinking skills](https://cxm.world/todays-pick/2026-predictions-the-year-ai-turns-nasty-and-makes-us-lazy/) from GenAI use through 2026. We're not just failing to check the output. We're losing the ability to.
+That asymmetry drives everything. When the cost of producing something approaches zero but the cost of evaluating it stays high, the default behavior is to skip the evaluation. Gartner is already predicting [atrophy of critical-thinking skills](https://cxm.world/todays-pick/2026-predictions-the-year-ai-turns-nasty-and-makes-us-lazy/) from GenAI use through 2026. We're not just failing to check the output. We're losing the muscle for it.
 
-## The Deadly Formula
+## The deadly formula
 
 Small input. Massive output. Zero comprehension.
 
-The person generating the code doesn't have the expertise to evaluate it. The person who *could* evaluate it doesn't have the time — because the volume of AI-generated code has already [overwhelmed existing review processes](https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026). The result is a growing stack of systems that work just well enough to ship but that nobody actually understands.
+The person generating the code doesn't have the expertise to evaluate it. The person who *could* evaluate it doesn't have the time, because the volume of AI-generated code has already [overwhelmed existing review processes](https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026). So you end up with a growing stack of systems that work well enough to ship but that nobody actually understands.
 
-This isn't about AI being bad at writing code. Sometimes it's great. It's about the feedback loop: the easier it is to produce output, the less we scrutinize it. And the less we scrutinize it, the more we trust it. And the more we trust it, the less capable we become of catching the moment it fails.
+This isn't about AI being bad at writing code. Sometimes it's great. It's about the feedback loop. The easier it is to produce output, the less we look at it. The less we look at it, the more we trust it. That cycle doesn't correct itself.
 
-Instant feedback is still not the same as instant gratification. But we're getting worse at telling the difference.
+Instant feedback is still not the same as instant gratification. We're just getting worse at telling the difference.
