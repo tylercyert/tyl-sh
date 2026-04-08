@@ -5,56 +5,56 @@ description: "When speed is the only metric, craftsmanship becomes a liability. 
 tags: ["ai", "software", "series:high-impact-low-understanding"]
 ---
 
-> This is Part 3 of the [High Impact, Low Understanding](/blog) series — a look at what happens when AI gives everyone a bigger weapon but not better aim.
+> Part 3 of the [High Impact, Low Understanding](/blog) series.
 
-## Three Orientations
+## Three orientations
 
-Every team ships with some mix of priorities, whether they've articulated them or not. In the AI era, I keep seeing the same three patterns:
+Every team ships with some mix of priorities, whether they've said them out loud or not. In the AI era, I keep seeing the same three patterns:
 
-**Solution Oriented.** Priority: make it work. Doesn't matter how. Prompt, generate, ship. If the feature exists, the ticket is closed.
+*Solution Oriented.* Priority: make it work. Doesn't matter how. Prompt, generate, ship. If the feature exists, the ticket is closed.
 
-**Velocity Oriented.** Priority: make it fast. Lines of code per day. PRs merged per sprint. Deployment frequency. The dashboard must go up and to the right.
+*Velocity Oriented.* Priority: make it fast. Lines of code per day. PRs merged per sprint. Deployment frequency. The dashboard must go up and to the right.
 
-**Security Oriented.** Priority: make it obscure. If nobody understands what was built, nobody can question it. We'll call this one "working as designed."
+*Security Oriented.* Priority: make it obscure. If nobody understands what was built, nobody can question it. We'll call this one "working as designed."
 
 None of these are new. But AI poured gasoline on all three.
 
-## Solution Oriented: Ship Something, Anything
+## Solution oriented: ship something, anything
 
-I get it. Businesses need results. Stakeholders don't care about code quality, they care about whether the feature exists. AI lets you deliver that feature in a fraction of the time, and from a pure "does it work" standpoint, the output is usually fine.
+I get it. Businesses need results. Stakeholders don't care about code quality; they care about whether the feature exists. AI lets you deliver that feature in a fraction of the time, and from a pure "does it work" standpoint, the output is usually fine.
 
 But "fine" has a shelf life. A [December 2025 CodeRabbit analysis](https://www.coderabbit.ai/blog/2025-was-the-year-of-ai-speed-2026-will-be-the-year-of-ai-quality) of 470 open-source pull requests found that AI co-authored code contained 1.7x more major issues than human-written code. Logic errors were 75% more common. Security vulnerabilities were 2.74x higher.
 
-Nearly [45% of AI-generated code contains security flaws](https://www.darkreading.com/application-security/ai-generated-code-leading-expanded-technical-security-debt), according to Veracode's 2025 GenAI report. Even the "safest" LLM tested still had a 19% vulnerability rate across OWASP categories. The solution works. The solution also has holes in it that nobody checked for because the ticket is already closed.
+[45% of AI-generated code contains security flaws](https://www.darkreading.com/application-security/ai-generated-code-leading-expanded-technical-security-debt), according to Veracode's 2025 GenAI report. Even the "safest" LLM tested still had a 19% vulnerability rate across OWASP categories. The solution works. The solution also has holes nobody checked for because the ticket is already closed.
 
-When "does it work" is the only question, the answer is always yes — right up until it isn't.
+When "does it work" is the only question, the answer is always yes. Right up until it isn't.
 
-## Velocity Oriented: The Dashboard Must Go Up
+## Velocity oriented: the dashboard must go up
 
-Average PR sizes [increased 150%](https://www.coderabbit.ai/blog/2025-was-the-year-of-ai-speed-2026-will-be-the-year-of-ai-quality) over the past year. Bug counts went up 9% alongside them. We are shipping more code faster, and we are shipping more defects faster. The dashboard went up. So did the incident count.
+Average PR sizes [increased 150%](https://www.coderabbit.ai/blog/2025-was-the-year-of-ai-speed-2026-will-be-the-year-of-ai-quality) over the past year. Bug counts went up 9% alongside them. We're shipping more code faster. We're also shipping more defects faster. The dashboard went up. So did the incident count.
 
-Here's where the incentives get perverse. If your engineering org measures productivity by lines of code, PRs merged, or deployment frequency — and many still do — then AI is the ultimate cheat code. One developer can now produce the output of three. The metrics look incredible. The codebase rots underneath.
+Here's where the incentives get perverse. If your engineering org measures productivity by lines of code or PRs merged (and many still do), AI is the ultimate cheat code. One developer can now produce the output of three. The metrics look incredible. The codebase rots underneath.
 
-[Code churn increased 39%](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) in projects heavily using AI coding tools. That's code being written, shipped, and then immediately rewritten. And [refactoring collapsed](https://thenewstack.io/vibe-coding-could-cause-catastrophic-explosions-in-2026/) — from 25% of all changes in 2021 down to 10% in 2024. A 60% decline. Nobody is cleaning up because cleaning up doesn't move the metrics.
+[Code churn increased 39%](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) in projects heavily using AI coding tools. That's code being written, shipped, and immediately rewritten. [Refactoring collapsed](https://thenewstack.io/vibe-coding-could-cause-catastrophic-explosions-in-2026/) from 25% of all changes in 2021 down to 10% in 2024. A 60% decline. Nobody is cleaning up because cleaning up doesn't move the metrics.
 
-If engineering leaders are making salary decisions based on volume of code changed, the combination of that plus AI creates incentives ripe for regrettable code being submitted. The developer who carefully reviews, refactors, and ships a tight, well-tested change looks unproductive next to the one who prompts their way through ten mediocre PRs before lunch.
+If engineering leaders are making salary decisions based on volume of code changed, that plus AI creates a perfect incentive for regrettable code. The developer who carefully reviews, refactors, and ships a tight change looks unproductive next to the one who prompts their way through ten mediocre PRs before lunch.
 
-## The Craftsmanship Counter-Narrative
+## The craftsmanship counter-narrative
 
-There's a [good piece from Codurance](https://www.codurance.com/publications/software-craftsmanship-in-the-ai-era) that frames this well:
+There's a [good piece from Codurance](https://www.codurance.com/publications/software-craftsmanship-in-the-ai-era) that puts it plainly:
 
 > "When speed is mistaken for progress, teams end up shipping more low-quality code, creating more rework, and compounding long-term risks."
 
-True productivity in software isn't about how many lines of code are produced. It's about how effectively developers solve meaningful problems, ensure their solutions are correct, and leave the codebase in a better state than they found it. That's always been the case, but the AI era made it easy to forget.
+Productivity in software has never been about how many lines of code you produce. It's about whether you solved the right problem, got the solution right, and left things better than you found them. That's always been the case. The AI era just made it easy to forget.
 
-The industry seems to be catching on. CodeRabbit's framing — ["2025 was the year of AI speed; 2026 will be the year of AI quality"](https://www.coderabbit.ai/blog/2025-was-the-year-of-ai-speed-2026-will-be-the-year-of-ai-quality) — suggests the pendulum is swinging. I hope so. But cultural shifts in engineering lag behind the tooling by months, sometimes years.
+The industry seems to be catching on. CodeRabbit's framing, ["2025 was the year of AI speed; 2026 will be the year of AI quality,"](https://www.coderabbit.ai/blog/2025-was-the-year-of-ai-speed-2026-will-be-the-year-of-ai-quality) suggests the pendulum is swinging. I hope so. But cultural shifts in engineering lag behind the tooling by months, sometimes years.
 
-## The Paradox
+## The paradox
 
-AI was supposed to free us to think harder about the interesting problems. Automate the boilerplate. Eliminate the tedious parts. Give developers space to focus on architecture, design, and the stuff that actually requires human judgment.
+AI was supposed to free us to think harder about the interesting problems. Automate the boilerplate. Give developers space to focus on architecture and the stuff that actually requires human judgment.
 
 Instead, for a lot of teams, it incentivized thinking less about everything. The boilerplate got automated, sure. But so did the judgment calls, the code review, the "should we even build this?" conversations. Speed filled the vacuum that effort left behind.
 
-I'm not anti-speed. Faster iteration is genuinely good. But speed is a means, not a mission. When the velocity metric becomes the goal, you've already lost the thing that made the velocity worth having.
+I'm not anti-speed. Faster iteration is good. But speed is a means, not a mission. When the velocity metric becomes the goal, you've already lost the thing that made the velocity worth having.
 
 Effort isn't overhead. It's the product.
