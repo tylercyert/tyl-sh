@@ -1,0 +1,48 @@
+---
+title: "New Toys, Same Hands"
+date: "2026-04-08"
+description: "AI scaled the blast radius of non-technical decisions without scaling the judgment behind them."
+tags: ["ai", "software", "series:high-impact-low-understanding"]
+---
+
+> This is Part 1 of the [High Impact, Low Understanding](/blog) series — a look at what happens when AI gives everyone a bigger weapon but not better aim.
+
+## The Kitchen Knife Problem
+
+For most of computing history, the worst thing a non-technical person could do was write a bad Excel macro. Maybe a rogue Zapier flow. A misguided WordPress plugin. Annoying? Sure. Containable? Always.
+
+The blast radius of a bad decision was proportional to the skill required to make it. If you didn't know what you were doing, your tools kept the damage small. A kitchen knife can cut you, but it's not taking out a city block.
+
+AI changed the proportions. The same person with the same level of understanding can now deploy infrastructure, modify production databases, and ship customer-facing applications. The capability scaled. The judgment didn't.
+
+We just handed everyone an ICBM and a "launch" button that accepts plain English.
+
+## Citizen Developers and Shadow Apps
+
+The numbers are hard to ignore. By 2026, business-user "developers" [outnumber professional developers 4:1](https://betanews.com/2025/12/17/citizen-developers-dominate-the-rise-of-ai-code-as-the-new-latin-development-predictions-for-2026/). Three-quarters of all apps are being built with low-code tools, many by people outside of IT entirely.
+
+This isn't hypothetical. The average enterprise is running somewhere between [4,500 and 6,000 AI-generated apps, workflows, and automations](https://zenity.io/use-cases/business-needs/citizen-development) in 2026. Two-thirds of those are invisible to security and IT teams. Shadow IT used to mean someone installing Dropbox on their work laptop. Now it means thousands of AI-generated microservices nobody knows exist.
+
+## When the ICBM Goes Off
+
+In March 2026, [Amazon's website went down for six hours](https://www.cnbc.com/2026/03/05/amazon-online-store-suffers-outage-for-some-users.html). U.S. order volume dropped 99%. An estimated 6.3 million orders never happened. The root cause? AI-assisted code deployed to production without proper approval. This wasn't the first time either. A similar incident days earlier had already caused 120,000 lost orders and 1.6 million website errors.
+
+Amazon's response was telling. They didn't ban AI tools. They [mandated that senior engineers sign off on any AI-assisted code](https://www.digitaltrends.com/computing/ai-code-wreaked-havoc-with-amazon-outage-and-now-the-company-is-making-tight-rules/) deployed by junior staff. In other words: the tool is fine, but someone who understands the blast radius needs to be in the room.
+
+They're not the only cautionary tale. A [vibe-coded app exposed 1.5 million API keys and 35,000 user email addresses](https://thenewstack.io/vibe-coding-could-cause-catastrophic-explosions-in-2026/) through a misconfigured database. The builder admitted they hadn't written a single line of code manually. Replit's AI agent wiped SaaStr's production database. Claude Code ran `terraform destroy` on 2.5 years of production infrastructure. These aren't edge cases anymore. They're Tuesday.
+
+## Vibe Coding and the Launch Button
+
+Andrej Karpathy coined the term "vibe coding" in [a February 2025 post](https://x.com/karpathy/status/1886192184808149383?lang=en), describing a style of programming where you "fully give in to the vibes, embrace exponentials, and forget that the code even exists." It resonated so hard that Collins named it Word of the Year for 2025.
+
+I'm not here to dunk on vibe coding. I think the tools are genuinely impressive, and I use them every day. But there's a difference between an experienced developer leaning on AI to accelerate familiar work and a stakeholder with no engineering background deploying a production system they can't debug when it breaks.
+
+The democratization is real. People who could never build software before can now. Some of those apps solve real problems. But the failure mode isn't "the app doesn't work." It's "the app works just well enough to reach production, where it does real damage."
+
+## Guardrails, Not Gatekeeping
+
+I don't think the answer is restricting who gets to build things. That ship has sailed, and honestly, it should have. But the tools alone aren't enough. The gap between "I can build this" and "I understand what I built" is where the damage lives.
+
+Amazon figured this out the hard way: someone who understands the blast radius needs to be in the loop. Not to block progress, but to catch the things that plain English can't express — the failure modes, the edge cases, the "what happens when this runs at scale" questions that no prompt is asking.
+
+The toys got bigger. The hands didn't. That's not a reason to take the toys away. It's a reason to teach people what they're holding.
