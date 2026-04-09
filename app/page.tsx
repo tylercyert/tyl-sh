@@ -35,6 +35,20 @@ export default function Home() {
 
       <hr />
 
+      <section>
+        <h2>projects</h2>
+        <div className="project">
+          <h3>
+            <Link href="https://bored.tyl.sh">are you bored?</Link>
+          </h3>
+          <p>
+            A boredom coach that helps you figure out what to do — part to-do app, part motivation engine.
+          </p>
+        </div>
+      </section>
+
+      <hr />
+
       {recentPosts.length > 0 && (
         <section>
           <h2>recent posts</h2>
