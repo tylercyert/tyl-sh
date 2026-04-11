@@ -21,22 +21,23 @@ export default function Home() {
       <hr />
 
       <section>
-        <h2>work</h2>
+        <h2>projects</h2>
+        <div className="project">
+          <h3>
+            <Link href="https://dotbox.zip">DotBox</Link>
+          </h3>
+          <p>
+            Visual builder for agentic systems. Design agent directories, roles, and configs — then deploy to any machine with a single command or zip file.
+          </p>
+        </div>
         <div className="project">
           <h3>
             <Link href="https://www.nitesong.io">nitesong</Link>
           </h3>
           <p>
-            Creator and sole developer of nitesong — songwriting SaaS built for
-            writers who want to stay in the creative flow.
+            Songwriting SaaS built for writers who want to stay in the creative flow.
           </p>
         </div>
-      </section>
-
-      <hr />
-
-      <section>
-        <h2>projects</h2>
         <div className="project">
           <h3>
             <Link href="https://bored.tyl.sh">are you bored?</Link>
