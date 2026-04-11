@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -29,6 +30,13 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="tyl.sh" href="/feed.xml" />
       </head>
       <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-1WLXE6247B" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1WLXE6247B');
+        `}</Script>
         <Header />
         <main className="site-main">{children}</main>
         <Footer />
