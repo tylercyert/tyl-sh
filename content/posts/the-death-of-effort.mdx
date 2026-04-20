@@ -1,0 +1,54 @@
+---
+title: "The Death of Effort"
+date: "2026-04-10"
+description: "AI made acceptable easy. But acceptable was never the standard we should have been aiming for."
+tags: ["ai", "software", "series:high-impact-low-understanding"]
+---
+
+> Part 3 of the [High Impact, Low Understanding](/blog) series.
+
+## Acceptable
+
+AI made it trivially easy to produce acceptable work. A prompt, a few iterations, something that looks right, runs, and checks the box. In a lot of organizations, that's all it takes. The deliverable exists. The meeting is over.
+
+Acceptable has always been a low bar. It just didn't used to be this easy to hit, so the effort required to get there carried some built-in quality. You had to understand what you were building because there was no shortcut past the understanding. Now there is. And when you remove the effort, you also remove everything the effort was quietly doing for you: the edge case thinking, the "wait, does this actually handle real data" moment, the pressure to get it right because getting it wrong meant starting over.
+
+Acceptable work that was hard to produce is a different thing than acceptable work that was easy to produce. The output might look the same. The underlying integrity is not.
+
+## The data backs this up
+
+A [December 2025 CodeRabbit analysis](https://www.coderabbit.ai/blog/2025-was-the-year-of-ai-speed-2026-will-be-the-year-of-ai-quality) of 470 open-source projects found that AI co-authored code contained 1.7x more major issues than human-written code. Logic errors were 75% more common. Security vulnerabilities were 2.74x higher. [45% of AI-generated code contains security flaws](https://www.darkreading.com/application-security/ai-generated-code-leading-expanded-technical-security-debt), according to Veracode's 2025 GenAI report.
+
+That's from environments where trained engineers are reviewing the output. In traditional business settings, where the person who built the tool is the same person who approved it and nobody with a technical background ever saw it, those numbers are a floor.
+
+[Output volume increased 150%](https://www.coderabbit.ai/blog/2025-was-the-year-of-ai-speed-2026-will-be-the-year-of-ai-quality) over the past year. Bug counts went up 9% alongside it. [Code churn increased 39%](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) in AI-heavy projects, things being built, shipped, and immediately rebuilt. [Maintenance and cleanup collapsed](https://thenewstack.io/vibe-coding-could-cause-catastrophic-explosions-in-2026/) by 60% since 2021. Nobody is going back to fix things because nobody built in the expectation that things would need fixing. It was acceptable when it shipped. That was supposed to be enough.
+
+## Acceptable isn't a standard
+
+Acceptable was never meant to be the target. It's the lowest bar something can clear and still be allowed to exist. When acceptable becomes the goal, you're optimizing for "not rejected" rather than "actually good."
+
+And in orgs where there's no technical review process, no QA, no staging environment, just a stakeholder who built something, showed it to their boss, and got a thumbs up because it looked like it worked, acceptable isn't even being evaluated. It's being assumed.
+
+The person who carefully stress-tests with edge cases and asks "what happens when this handles real customer data at scale" looks like they're stalling. The person who prompts their way to a demo in an afternoon looks like a star. The incentive structure rewards the appearance of competence over the substance of it.
+
+## Raise the bar or get buried by it
+
+If we're going to lean on AI tooling, and we should, then we need to raise the bar for what "acceptable" means. The ease of production should free us to be more rigorous about what we accept.
+
+That means rigid criteria. What does this need to handle before it's approved? Who reviews it? What are the failure modes? What does maintenance look like? If you can't answer those questions, you haven't finished building. You've just finished prompting.
+
+There's a [good piece from Codurance](https://www.codurance.com/publications/software-craftsmanship-in-the-ai-era) that puts it plainly:
+
+> "When speed is mistaken for progress, teams end up shipping more low-quality code, creating more rework, and compounding long-term risks."
+
+The tech industry is starting to get this. CodeRabbit's framing, ["2025 was the year of AI speed; 2026 will be the year of AI quality,"](https://www.coderabbit.ai/blog/2025-was-the-year-of-ai-speed-2026-will-be-the-year-of-ai-quality) suggests the pendulum is swinging. But that's the tech industry talking to itself. Traditional businesses, the ones where AI adoption is happening fastest among non-technical staff, haven't even started having this conversation.
+
+## The real opportunity
+
+AI was supposed to free us to think harder about the interesting problems. And it can. But only if we let the time it saves us flow into higher standards instead of higher volume.
+
+The effort didn't die because AI killed it. It died because nobody demanded it anymore. The tooling changed but the approval process didn't. The speed went up but the criteria stayed the same. And when you can produce acceptable work without effort, effort starts to look like waste.
+
+It isn't. Effort is what separates "it works" from "it works and we know why, and we know what happens when it doesn't, and someone is responsible for maintaining it." That's not overhead. That's the product.
+
+Acceptable is easy now. Good still isn't. Act accordingly.
