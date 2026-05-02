@@ -1,7 +1,7 @@
 ---
-title: "Spotify's Official MCP vs the Unofficial One"
+title: "The Official Spotify Connector is a Joke"
 date: "2026-05-02"
-description: "I left Apple Music for Spotify because of an MCP integration. The official one disappointed me. A community one saved it."
+description: "Spotify's Claude Connector is a marketing demo, not a tool. A community MCP server gave me what I actually wanted."
 tags: ["ai", "mcp", "spotify"]
 ---
 
@@ -21,13 +21,13 @@ That's because I felt like I was getting full control to essentially create my o
 
 ## Immediate disappointment
 
-Spoiler alert: I kinda hate the integration. It's more a gimmick to advertise their new AI features that are already available in the app. It was largely useless for my playlist creation use case because it forces the prompt to be sent to the MCP and lets Spotify's (largely dumb) recommendation algorithm create the playlist for you. There are only a few tools available, and it seems like they built an integration for a VERY VERY specific use case on purpose, to make sure we don't have too much fun.
+Spoiler alert: I kinda hate the Connector. It's more a gimmick to advertise their new AI features that are already available in the app. It was largely useless for my playlist creation use case because it forces the prompt through Spotify's (largely dumb) recommendation algorithm to create the playlist for you. There are only a few tools available, and it seems like they built the Connector for a VERY VERY specific use case on purpose, to make sure we don't have too much fun.
 
 I think they largely want to preserve their discovery attribution statistics and marketing advantage on their own platform rather than letting people discover music through other tools. For this reason it's impossible to create playlists and add songs from external lists. Luckily, this acted as a gateway drug to the Spotify API, which is capable of everything I need and doesn't lock me into Spotify's silly AI recommendations.
 
-## The unofficial route
+## Going the MCP route instead
 
-I could have built my own MCP, but since I was already dizzy from trying to make the native Spotify connector useful, I hastily found an existing one (this would prove to bite me later): [marcelmarais/spotify-mcp-server](https://github.com/marcelmarais/spotify-mcp-server). I had to create an app on developer.spotify.com and authorize the server, but after I set it up I was getting immediate success creating playlists.
+I could have built my own MCP server, but since I was already dizzy from trying to make the official Connector useful, I hastily found an existing one (this would prove to bite me later): [marcelmarais/spotify-mcp-server](https://github.com/marcelmarais/spotify-mcp-server). I had to create an app on developer.spotify.com and authorize the server, but after I set it up I was getting immediate success creating playlists.
 
 One tweak I spent too much time troubleshooting: there were some 2026 API updates Spotify made that weren't present in the MCP. Seems like it's not actively maintained, but I was able to have an agent update it based on the [new API changes](https://developer.spotify.com/documentation/web-api/references/changes/february-2026).
 
