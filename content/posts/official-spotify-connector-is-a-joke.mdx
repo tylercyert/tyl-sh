@@ -5,25 +5,27 @@ description: "Spotify's Claude Connector is a marketing demo, not a tool. A comm
 tags: ["ai", "mcp", "spotify"]
 ---
 
-## Overview
+## Bouncing around
 
-I've been bouncing around streaming services for the last 10 years. At first it was Spotify without pause. Then YouTube Music, because it was the best of YouTube and music in one app. Tidal came around for my audiophile phase (short lived), then Apple Music because it was included in my phone plan. Now I think it's time to switch back to Spotify again, because my biggest Spotify gripe has been solved (but not by Spotify themselves).
+I've been bouncing around streaming services for the last 10 years. At first it was Spotify without pause. Then YouTube Music, because it was the best of YouTube and music in one app. Tidal came around for my audiophile phase (short lived), then Apple Music because it was included in my phone plan. Now I think it's time to switch back to Spotify, because my biggest Spotify gripe has been solved (but not by Spotify themselves).
 
 ## My Spotify gripe
 
-My Spotify gripe has been, and still is, the recommendations. Primarily the "create a radio station" recommendations. It consistently fails to identify subgenres and rarely gives you the same subgenre as the song you started the station from. Unless you're starting from a more general, globally popular genre. If I'm trying to start a radio station from an 80s love ballad, it generally does well, until it, out of nowhere, starts playing Adele or some other modern song. At which point I completely lose confidence in the station and start manually adding things to the queue.
+My Spotify gripe has been, and still is, the recommendations. Primarily the "create a radio station" recommendations. It consistently fails to identify subgenres and rarely gives you the same subgenre as the song you started the station from. Unless you're starting from a more general, globally popular genre. If I'm trying to start a radio station from an 80s love ballad, it generally does well, until it, out of nowhere, starts playing Adele or some other modern song. At which point I lose confidence in the station and start manually adding things to the queue.
 
-This gripe has stayed the same through countless updates and algorithm preference sliders. A more extreme case: I started a station from a modern UK rap artist, and the next two songs were 50 Cent and Lil' Tecca. This actually happened. It is beyond distracting. I think Apple Music is way ahead in this regard. I've rarely had issues like this on Apple Music and largely trust their radio algorithm.
+This gripe has stayed the same through countless updates and algorithm preference sliders. A more extreme case: I started a station from a modern UK rap artist, and the next two songs were 50 Cent and Lil' Tecca. This actually happened. It's beyond distracting, and I think Apple Music is way ahead in this regard. I've rarely had issues like this on Apple Music and largely trust their radio algorithm.
+
+## What pulled me back
 
 The reason I'm leaving Apple Music now is because I read [this newsroom announcement from Spotify](https://newsroom.spotify.com/2026-04-23/claude-integration/). Read is a strong term. I more like read the headline and immediately started scrambling to try it out.
 
-That's because I felt like I was getting full control to essentially create my own algorithm for playlists. I could tell, within a prompt, exactly what to play (or what not to play). I could describe scenes for the AI to score. This possibility was enough for me to quit Apple Music without hesitation and migrate my songs back to Spotify so I could start.
+That's because I felt like I was getting full control to essentially create my own algorithm for playlists. I could tell, within a prompt, exactly what to play (or what not to play). I could describe scenes for the AI to score. It was enough to make me quit Apple Music and migrate my library back to Spotify.
 
 ## Immediate disappointment
 
-Spoiler alert: I kinda hate the Connector. It's more a gimmick to advertise their new AI features that are already available in the app. It was largely useless for my playlist creation use case because it forces the prompt through Spotify's (largely dumb) recommendation algorithm to create the playlist for you. There are only a few tools available, and it seems like they built the Connector for a VERY VERY specific use case on purpose, to make sure we don't have too much fun.
+Spoiler alert: I kinda hate the Connector. It's more a gimmick to advertise their new AI features that are already available in the app. It was useless for my playlist creation use case because it forces the prompt through Spotify's (largely dumb) recommendation algorithm to create the playlist for you. There are only a few tools available, and it seems like they built the Connector for a VERY VERY specific use case on purpose, to make sure we don't have too much fun.
 
-I think they largely want to preserve their discovery attribution statistics and marketing advantage on their own platform rather than letting people discover music through other tools. For this reason it's impossible to create playlists and add songs from external lists. Luckily, this acted as a gateway drug to the Spotify API, which is capable of everything I need and doesn't lock me into Spotify's silly AI recommendations.
+I think they want to preserve their discovery attribution statistics and marketing advantage on their own platform rather than letting people discover music through other tools. For this reason it's impossible to create playlists and add songs from external lists. Luckily, this acted as a gateway drug to the Spotify API, which is capable of everything I need and doesn't lock me into Spotify's silly AI recommendations.
 
 ## Going the MCP route instead
 
@@ -31,9 +33,14 @@ I could have built my own MCP server, but since I was already dizzy from trying 
 
 One tweak I spent too much time troubleshooting: there were some 2026 API updates Spotify made that weren't present in the MCP. Seems like it's not actively maintained, but I was able to have an agent update it based on the [new API changes](https://developer.spotify.com/documentation/web-api/references/changes/february-2026).
 
-## The result
+## Outro
 
-A simple Claude project that creates playlists in my Spotify based on prose, or anything else you can ask, really. I'm primarily using it to make the equivalent of those YouTube focus mixes, except now I can save the songs I like. So far I've made a couple of fun playlists I'll list below if you're interested.
+What I ended up with is a simple Claude project that creates playlists in my Spotify based on prose, or anything else you can ask, really. I'm primarily using it to make the equivalent of those YouTube focus mixes, except now I can save the songs I like. A couple of fun ones so far:
 
-- ['the slow part of the night' — Smooth RnB with a hint of Japanese City Pop](https://open.spotify.com/playlist/0ZVPUoot6DEniRr9VwzwSn?si=6bd57ea9dd884a19)
-- ['venetian, smoke-infused, blinds' — Smooth Jazz inspired by 1940s Noir Crime Film aesthetic](https://open.spotify.com/playlist/3GuT95SSLwJeae3Jif1mgZ?si=65ba3e2ae8ef4b22)
+<SpotifyPlaylist id="0ZVPUoot6DEniRr9VwzwSn" title="the slow part of the night" />
+
+*'the slow part of the night' — Smooth RnB with a hint of Japanese City Pop*
+
+<SpotifyPlaylist id="3GuT95SSLwJeae3Jif1mgZ" title="venetian, smoke-infused, blinds" />
+
+*'venetian, smoke-infused, blinds' — Smooth Jazz inspired by 1940s Noir Crime Film aesthetic*
