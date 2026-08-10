@@ -1,0 +1,66 @@
+---
+title: "Job Security Through Obscurity"
+date: "2026-04-11"
+description: "When nobody wrote the code, nobody understands it. And that creates a new, ironic kind of irreplaceability."
+tags: ["ai", "software", "series:high-impact-low-understanding"]
+---
+
+> Part 4 of the [High Impact, Low Understanding](/blog) series.
+
+## The classic anti-pattern
+
+"Security through obscurity" is one of the first things you learn not to do in software. Don't hide the algorithm. Don't rely on nobody looking. Don't assume complexity is the same as safety. It fails every time, because eventually someone does look, and the thing you hid behind complexity was never actually secure.
+
+I think we're building a career version of the same anti-pattern. Call it job security through obscurity. When nobody wrote the code, nobody understands it. And when nobody understands it, whoever can *appear* to understand it becomes indispensable. The alternative is admitting nobody knows how it works.
+
+This plays out differently in a tech company than in a traditional org. In tech, at least someone in the building can probably read the code. In a mid-size insurance firm or a healthcare system or a government agency, the person who built the AI-generated tool might be the only person who even knows it exists. And their "understanding" of it might be nothing more than "I typed the prompt and it seemed to work."
+
+## The maintainability crisis
+
+The numbers on AI-generated technical debt are getting hard to wave away.
+
+Ox Security's 2025 report described AI-generated code as ["highly functional but systematically lacking in architectural judgment."](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) It works. It also doesn't *fit*. Not with existing systems, not with an organization's conventions, not with any coherent long-term design.
+
+The cost shows up fast. [Unmanaged AI-generated solutions drive maintenance costs to 4x traditional levels by year two.](https://www.buildmvpfast.com/blog/ai-generated-code-technical-debt-management-2026) Total unresolved technical debt from AI code grew from a few hundred issues in early 2025 to over 110,000 by February 2026. That number is compounding.
+
+Even among trained developers, [trust in AI code accuracy dropped from 40% to 29%](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) year over year, with 46% actively distrusting the output. These are the people who can actually *read* what was generated, and they're getting more skeptical. The non-technical stakeholder building shadow tools for their department doesn't have that skepticism, because they don't have the basis for it.
+
+## The cURL story
+
+This one stuck with me. Daniel Stenberg, the maintainer of cURL (a tool that basically every computer on the internet touches) [shut down the project's bug bounty program](https://www.theregister.com/2026/01/21/curl_ends_bug_bounty/) at the end of January 2026.
+
+The reason wasn't funding or interest. It was AI slop. By mid-2025, roughly 20% of bug bounty submissions were AI-generated reports that "sound technical but contain nothing useful." Submission volume spiked to eight times normal. The confirmed-vulnerability rate, which had been above 15%, dropped below 5%.
+
+Stenberg's hope was that ending the bounty would "remove the incentive for people to submit crap." Think about that. One of the most critical open-source projects in the world had to shut down its security reporting pipeline because AI made it too easy to generate plausible-looking garbage at scale.
+
+Trivial effort to produce. Enormous effort to evaluate.
+
+## The expertise gap is widening
+
+Here's the part that worries me most. On the technical side, companies are freezing junior developer hiring because "AI can do that work." But a junior developer isn't just a task executor. They're a future expert in training. Every junior you don't hire is a senior you won't have in five years, someone with the judgment to review AI output and catch what it gets wrong.
+
+[Junior developers report the lowest quality improvements from AI tools](https://www.infoq.com/news/2025/11/ai-code-technical-debt/) (just 51.9%) but the highest confidence shipping AI output without review (60.2%). Seniors see higher quality gains but are far less confident shipping unreviewed. They know what to look for, so they know when to worry. But there are only so many of them, and the volume of AI-generated work is [overwhelming existing review capacity](https://www.darkreading.com/application-security/coders-adopt-ai-agents-security-pitfalls-lurk-2026).
+
+Now zoom out from engineering entirely. In traditional business environments, the "expertise gap" isn't a gap. It's a canyon. The people adopting AI fastest are often senior stakeholders who have organizational authority but no technical background at all. They're not junior developers who at least sit near senior developers. They're department heads, operations managers, project leads, working in orgs where IT is a service desk, not a strategic partner. Nobody is training them to evaluate what AI produces. Nobody is reviewing their output. And their seniority means nobody feels comfortable pushing back.
+
+## The irony
+
+AI was supposed to make technical work accessible. Let anyone with a vision produce the solution without needing a specialist.
+
+What's actually happening is stranger. AI is creating a new kind of indispensability: the person who can interpret and wrangle the AI's output, even imperfectly. In a tech company, that's the developer who can at least read the generated code. In a traditional org, it's just whoever built the thing, and their "understanding" might not go deeper than the prompt they typed.
+
+That's job security through obscurity. Like its security counterpart, it's fragile. It works until someone looks closely. It works until the system breaks and nobody in the building can fix it. It works until the person who built it leaves and takes the only context with them.
+
+In a traditional business, this is especially dangerous because the obscurity isn't even intentional. Nobody is deliberately hiding how the system works. It's just that nobody asked, nobody documented it, and the builder didn't have the technical vocabulary to explain it even if someone did ask. The organization becomes dependent on something nobody understands, built by someone who can't explain it, approved by nobody.
+
+Building your position on other people not understanding what you shipped is a losing strategy, whether that opacity comes from AI-generated complexity or just from being the only person who remembers what prompt they typed. The cure is the same: understand what you deploy. If you can't explain it, you don't own it.
+
+## Where this leaves us
+
+This isn't a new problem wearing a new hat. There has always been tension between speed and quality, between shipping and understanding, between "it works" and "it's right." AI just widened that gap faster than anyone could adapt. And the widening isn't happening in Silicon Valley first this time. It's happening in every org where someone with a laptop and a ChatGPT subscription can build something that the whole department starts depending on.
+
+The tech industry is starting to course-correct. Karpathy already moved past "vibe coding" to ["agentic engineering."](https://thenewstack.io/vibe-coding-is-passe/) Governance frameworks are forming. Amazon figured out the hard way that you need senior review on AI-assisted deploys.
+
+But traditional organizations, the ones where AI adoption is being driven by non-technical stakeholders with no guardrails, haven't started this conversation yet. They're the ones who need it most. If you're building something with AI, understand what it does. If you're leading a team that's adopted AI tools, build a policy before the next shadow project becomes load-bearing. If you're an executive watching your org "move fast with AI," ask who's reviewing the output.
+
+Obscurity isn't security. It never was.
