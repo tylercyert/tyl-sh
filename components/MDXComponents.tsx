@@ -13,6 +13,54 @@ const SpotifyPlaylist = ({ id, title }: { id: string; title?: string }) => (
   />
 );
 
+// The MDX renderer blocks JS expressions, so every prop arrives as a string.
+const Figure = ({
+  src,
+  alt,
+  caption,
+  href,
+  generated,
+  width = "592",
+  height = "400",
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  href?: string;
+  generated?: string;
+  width?: string;
+  height?: string;
+}) => {
+  const w = Number(width);
+  const image = (
+    <Image
+      src={src}
+      alt={alt}
+      width={w}
+      height={Number(height)}
+      style={{ width: "100%", height: "auto" }}
+    />
+  );
+  const isGenerated = generated === "true";
+  return (
+    <figure style={{ maxWidth: `${w}px`, marginInline: 0 }}>
+      {href ? (
+        <a href={href} rel="noreferrer">
+          {image}
+        </a>
+      ) : (
+        image
+      )}
+      {(caption || isGenerated) && (
+        <figcaption>
+          {caption}
+          {isGenerated ? " (generated)" : ""}
+        </figcaption>
+      )}
+    </figure>
+  );
+};
+
 const components: MDXComponents = {
   img: (props) => (
     <Image
@@ -23,6 +71,7 @@ const components: MDXComponents = {
     />
   ),
   SpotifyPlaylist,
+  Figure,
 };
 
 export default components;

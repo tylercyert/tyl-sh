@@ -26,6 +26,24 @@ Post content goes here. Standard Markdown works — headings, lists, code blocks
 
 To add a new post, create a file like `content/posts/my-new-post.mdx`. The filename becomes the URL slug (`/blog/my-new-post`). Posts are sorted by date, newest first.
 
+### Figures in posts
+
+Put a post's images in `public/images/posts/<slug>/` and place them with `<Figure>`. The MDX renderer blocks JS, so every prop is a plain string attribute: `width={400}` or `alt={'...'}` is silently dropped. Use `generated="true"` (not a bare `generated`) for AI-generated images; it appends "(generated)" to the caption.
+
+```mdx
+<Figure
+  src="/images/posts/<slug>/name.svg"
+  alt="What the figure shows"
+  caption="One line under the figure."
+  href="https://example.com/source"
+  width="400"
+  height="300"
+  generated="true"
+/>
+```
+
+`href` (optional) links the image, not the caption. `width` and `height` default to "592" and "400"; the figure is never upscaled past `width` and shrinks in narrow columns.
+
 ### Interactive elements in posts
 
 Since posts are MDX, you can import and use React components inline. Register them in `components/MDXComponents.tsx` to make them available in all posts.
