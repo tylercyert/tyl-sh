@@ -10,12 +10,8 @@ export default function SmallPagesTermsPage() {
   return (
     <div className="prose">
       <h1>Small Pages Terms of Use</h1>
-      <blockquote>
-        <p>Draft for review, not legal advice.</p>
-      </blockquote>
       <p>
-        <strong>Effective date:</strong> [effective date: the day the App
-        Store listing goes live]
+        <strong>Effective date:</strong> October 10, 2026
       </p>
       <p>
         These terms are an agreement between you and Tyler Cyert, an
@@ -31,7 +27,10 @@ export default function SmallPagesTermsPage() {
         </Link>
         ) explains how we handle your information.
       </p>
-      <p>You must be at least 13 to use Small Pages.</p>
+      <p>
+        You must be at least 13 to use Small Pages. If you&apos;re under 18,
+        have a parent or guardian read these terms with you.
+      </p>
 
       <h2>The service</h2>
       <p>
@@ -204,10 +203,6 @@ export default function SmallPagesTermsPage() {
       </ul>
 
       <h2>Disclaimers and liability</h2>
-      <p>
-        [disclaimers: final wording for a lawyer, if the human wants one; until
-        then this plain-words version stands]
-      </p>
       <ul>
         <li>
           The app is provided &ldquo;as is&rdquo; and &ldquo;as
@@ -218,8 +213,8 @@ export default function SmallPagesTermsPage() {
           streaks, or for decisions you make based on feedback.
         </li>
         <li>
-          Our total liability is limited to [liability cap: the human to
-          decide].
+          Our total liability is limited to the amount you paid us in the 12
+          months before the claim, or US$50, whichever is more.
         </li>
         <li>
           Nothing in these terms limits rights you have under consumer law that
@@ -287,7 +282,7 @@ export default function SmallPagesTermsPage() {
         <br />
         Bloomington, Indiana, United States
         <br />
-        [contact email: the human to confirm]
+        Email: <Link href="mailto:sudo@tyl.sh">sudo@tyl.sh</Link>
       </p>
     </div>
   );

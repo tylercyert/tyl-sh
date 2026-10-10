@@ -10,12 +10,8 @@ export default function SmallPagesPrivacyPage() {
   return (
     <div className="prose">
       <h1>Small Pages Privacy Policy</h1>
-      <blockquote>
-        <p>Draft for review, not legal advice.</p>
-      </blockquote>
       <p>
-        <strong>Effective date:</strong> [effective date: the day the App
-        Store listing goes live]
+        <strong>Effective date:</strong> October 10, 2026
       </p>
       <p>
         Small Pages is a daily writing app for iPhone and iPad, made by Tyler
@@ -262,8 +258,7 @@ export default function SmallPagesPrivacyPage() {
         the right to access, correct or delete your data, to restrict or object
         to how we use it, to data portability, and to complain to your local
         data protection authority. Pages sent for feedback are processed in the
-        United States. [transfer safeguards and EU/UK representative: for a
-        lawyer]
+        United States.
       </p>
       <p>
         <strong>California.</strong> We don&apos;t sell or share your personal
@@ -295,7 +290,7 @@ export default function SmallPagesPrivacyPage() {
         <br />
         Bloomington, Indiana, United States
         <br />
-        [contact email: the human to confirm]
+        Email: <Link href="mailto:sudo@tyl.sh">sudo@tyl.sh</Link>
       </p>
     </div>
   );
