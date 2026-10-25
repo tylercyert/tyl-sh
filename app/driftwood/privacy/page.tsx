@@ -11,7 +11,7 @@ export default function DriftwoodPrivacyPage() {
     <div className="prose">
       <h1>Driftwood Privacy Policy</h1>
       <p>
-        <strong>Effective date:</strong> October 13, 2026
+        <strong>Effective date:</strong> October 25, 2026
       </p>
       <p>
         Driftwood is an iPhone app that reads your saved articles aloud, made
@@ -103,7 +103,17 @@ export default function DriftwoodPrivacyPage() {
       </p>
 
       <h2>Purchases</h2>
-      <p>Version 1.0 is free, with nothing to buy in the app.</p>
+      <p>
+        When you buy Driftwood Unlimited, Apple handles the payment. We never
+        see your name, Apple Account or payment details.
+      </p>
+      <p>
+        To know whether you have Unlimited, the app asks Apple on your device
+        through Apple&apos;s StoreKit, and keeps the answer on your device.
+        Nothing about your purchase is sent to us or to anyone else.
+        Apple&apos;s own handling of purchases is covered by Apple&apos;s
+        privacy policy.
+      </p>
 
       <h2>Your choices</h2>
       <ul>

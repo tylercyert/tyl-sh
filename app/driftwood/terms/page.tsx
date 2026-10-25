@@ -11,7 +11,7 @@ export default function DriftwoodTermsPage() {
     <div className="prose">
       <h1>Driftwood Terms of Use</h1>
       <p>
-        <strong>Effective date:</strong> October 13, 2026
+        <strong>Effective date:</strong> October 25, 2026
       </p>
       <p>
         These terms are an agreement between you and Tyler Cyert, an
@@ -39,7 +39,72 @@ export default function DriftwoodTermsPage() {
         reads them aloud with your device&apos;s own voices, like a music
         player. It also offers folders and an optional daily reminder.
       </p>
-      <p>Version 1.0 is free, with nothing to buy in the app.</p>
+      <ul>
+        <li>
+          <strong>Free:</strong> saving articles, your Library and folders,
+          the built-in samples, and the first article you save, played in full.
+        </li>
+        <li>
+          <strong>Driftwood Unlimited</strong>, paid: listening to all your
+          saves, every day. You can buy it as a yearly or monthly subscription,
+          or once for life.
+        </li>
+      </ul>
+
+      <h2>Subscriptions and purchases</h2>
+      <ul>
+        <li>
+          Payments go through Apple. The app asks Apple, on your device,
+          whether you have Unlimited.
+        </li>
+        <li>
+          Unlimited costs $29.99 a year, $4.99 a month, or $39.99 once for
+          life in the United States. Prices in other countries may differ. The
+          App Store shows your price before you buy.
+        </li>
+        <li>
+          The yearly plan includes a 14-day free trial, if you&apos;re
+          eligible. The monthly plan and the lifetime purchase have no trial.
+          If you don&apos;t cancel at least 24 hours before the trial ends, it
+          becomes a paid yearly subscription. Any unused part of a free trial
+          ends when you buy a subscription.
+        </li>
+        <li>
+          Payment is charged to your Apple Account when you confirm the
+          purchase, or when the trial ends.
+        </li>
+        <li>
+          Subscriptions renew automatically unless you cancel at least 24 hours
+          before the current period ends. Apple charges the renewal within the
+          24 hours before the period ends.
+        </li>
+        <li>
+          To manage or cancel, go to Settings on your iPhone or iPad, tap your
+          name, then Subscriptions. Deleting the app doesn&apos;t cancel your
+          subscription.
+        </li>
+        <li>
+          If you cancel, Unlimited stays on until the end of the period
+          you&apos;ve paid for.
+        </li>
+        <li>
+          The lifetime purchase is paid once. It doesn&apos;t renew, and
+          there&apos;s nothing to cancel.
+        </li>
+        <li>
+          Apple handles all billing and refunds. To ask for a refund, use
+          Apple&apos;s &ldquo;Report a Problem&rdquo; page. We can&apos;t issue
+          refunds ourselves.
+        </li>
+        <li>
+          If you reinstall the app or get a new device, use &ldquo;Restore&rdquo;
+          on the plans screen in the app.
+        </li>
+        <li>
+          We may change prices. Apple tells you before a change affects your
+          subscription and, where required, asks you to agree.
+        </li>
+      </ul>
 
       <h2>Your saves are yours</h2>
       <ul>
@@ -81,6 +146,7 @@ export default function DriftwoodTermsPage() {
           copy, modify or reverse engineer the app, except where the law allows
           it;
         </li>
+        <li>try to get around Driftwood Unlimited;</li>
         <li>resell the app or what it reads.</li>
       </ul>
 
