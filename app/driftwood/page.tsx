@@ -23,6 +23,27 @@ export default function DriftwoodSupportPage() {
       </p>
 
       <h2>Common questions</h2>
+      <h3>I bought Unlimited on another device, or after reinstalling</h3>
+      <p>
+        Open Settings in the app and tap <strong>Restore</strong>, or tap
+        Restore at the bottom of the plans screen. Use the same Apple Account
+        you bought with.
+      </p>
+      <h3>How do I cancel my subscription?</h3>
+      <p>
+        Subscriptions are managed by Apple. On your iPhone or iPad, open
+        Settings, tap your name, then <strong>Subscriptions</strong>. Cancel
+        at least 24 hours before the end of the current period to avoid the
+        next charge. The lifetime purchase has nothing to cancel.
+      </p>
+      <h3>How do I ask for a refund?</h3>
+      <p>
+        Apple handles refunds. Ask at{" "}
+        <Link href="https://reportaproblem.apple.com">
+          reportaproblem.apple.com
+        </Link>
+        .
+      </p>
       <h3>Where are my saves stored?</h3>
       <p>
         On your device. There&apos;s no account and no sign-in, so we
