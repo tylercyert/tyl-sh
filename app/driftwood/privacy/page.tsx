@@ -32,15 +32,16 @@ export default function DriftwoodPrivacyPage() {
         <li>There are no ads and no tracking.</li>
         <li>
           To manage Driftwood Unlimited, the app uses RevenueCat. It receives
-          a random ID and your Driftwood purchase history, never your saves or
-          what you listen to (see Purchases).
+          a random ID, the device ID iOS gives Driftwood, and your Driftwood
+          purchase history, never your saves or what you listen to (see
+          Purchases).
         </li>
       </ul>
 
       <h2>What we collect</h2>
       <p>
         Only your Driftwood purchase history, through RevenueCat, under a
-        random ID (see Purchases). The app has no server of ours to talk to.
+        random ID and the device ID iOS gives Driftwood (see Purchases). The app has no server of ours to talk to.
         It doesn&apos;t send us or anyone else your saves, what you listen to,
         or anything else about you.
       </p>
@@ -129,6 +130,11 @@ export default function DriftwoodPrivacyPage() {
           email address or Apple Account;
         </li>
         <li>
+          the device ID iOS gives Driftwood on your device (Apple&apos;s
+          &ldquo;identifier for vendor&rdquo;). Other developers&apos; apps get
+          a different one, and it isn&apos;t the advertising identifier;
+        </li>
+        <li>
           your App Store purchase history for Driftwood: the plan, its price
           and currency, and the dates of purchases, trials, renewals,
           cancellations and refunds;
@@ -193,7 +199,8 @@ export default function DriftwoodPrivacyPage() {
         <strong>California.</strong> We don&apos;t sell or share your personal
         information, as California law uses those words, and we don&apos;t use
         it for targeted advertising. You can ask to know what we hold about
-        you (only purchase records under a random ID, as of this version), to
+        you (only purchase records under a random ID and device ID, as of this
+        version), to
         correct it or to delete it, and
         we won&apos;t treat you differently for asking.
       </p>
