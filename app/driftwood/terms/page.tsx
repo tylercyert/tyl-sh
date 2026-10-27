@@ -11,7 +11,7 @@ export default function DriftwoodTermsPage() {
     <div className="prose">
       <h1>Driftwood Terms of Use</h1>
       <p>
-        <strong>Effective date:</strong> October 25, 2026
+        <strong>Effective date:</strong> October 27, 2026
       </p>
       <p>
         These terms are an agreement between you and Tyler Cyert, an
@@ -54,8 +54,9 @@ export default function DriftwoodTermsPage() {
       <h2>Subscriptions and purchases</h2>
       <ul>
         <li>
-          Payments go through Apple. The app asks Apple, on your device,
-          whether you have Unlimited.
+          Payments go through Apple. The app checks whether you have Unlimited
+          through Apple and RevenueCat, the service we use to manage purchases
+          (see the Privacy Policy).
         </li>
         <li>
           Unlimited costs $29.99 a year, $4.99 a month, or $39.99 once for
