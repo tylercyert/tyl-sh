@@ -118,9 +118,10 @@ export default function DriftwoodPrivacyPage() {
       <p>
         To manage Unlimited, the app uses RevenueCat, Inc. (
         <Link href="https://www.revenuecat.com">https://www.revenuecat.com</Link>
-        ), a service that checks App Store purchases for us. When the app
-        checks whether you have Unlimited, or shows you the prices, it sends
-        RevenueCat:
+        ), a service that checks App Store purchases for us. Each time you
+        open the app, it asks RevenueCat whether you have Unlimited, and it
+        asks again before playing and when it shows you the prices. Each time,
+        it sends RevenueCat:
       </p>
       <ul>
         <li>
@@ -133,7 +134,7 @@ export default function DriftwoodPrivacyPage() {
           cancellations and refunds;
         </li>
         <li>
-          basic technical details: the app and iOS versions, your
+          basic technical details, such as the app and iOS versions, your
           device&apos;s language and region, and your App Store country.
         </li>
       </ul>
