@@ -27,7 +27,7 @@ export default function Home() {
             <Link href="https://dotbox.zip">DotBox</Link>
           </h3>
           <p>
-            Visual builder for agentic systems. Design agent directories, roles, and configs — then deploy to any machine with a single command or zip file.
+            Draw your agent system as a graph, copy one prompt, and paste it into Claude Code or Codex — it sets up every agent, skill and handoff for you. Free and <Link href="https://github.com/tylercyert/dotbox">open source</Link>.
           </p>
         </div>
         <div className="project">
